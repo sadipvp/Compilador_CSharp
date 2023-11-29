@@ -14,48 +14,45 @@ La motivación detrás de este proyecto es explorar la integración de Antlr en 
 
 Antes de usar este proyecto, asegúrate de tener Antlr instalado. Los siguientes pasos te guiarán a través del proceso de instalación:
 
-```bash
 1. Navega al directorio `/usr/local/lib`.
 2. Descarga el archivo JAR completo de Antlr:
-   $ curl -O http://www.antlr.org/download/antlr-4.5-complete.jar
-Establece la variable de entorno CLASSPATH:
+ ```  $ curl -O http://www.antlr.org/download/antlr-4.5-complete.jar```
+###Establece la variable de entorno CLASSPATH:
 
-bash
-
-$ export CLASSPATH=".:/usr/local/lib/antlr-4.5-complete.jar:$CLASSPATH"
+```$ export CLASSPATH=".:/usr/local/lib/antlr-4.5-complete.jar:$CLASSPATH"```
 
 
-## Crea un alias para Antlr4:
+###Crea un alias para Antlr4:
 
-bash
-Copy code
-$ alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.5-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
-Integración con Unity
+
+```$ alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.5-complete.jar:$CLASSPATH" org.antlr.v4.Tool'```
+###Integración con Unity
 Descarga la ejecución de C# para Antlr y descomprímela.
 Arrastra y suelta los archivos de ejecución de C# en tu proyecto de Unity.
-Gramática de Antlr
+###Gramática de Antlr
 Crea un archivo de gramática Antlr llamado "Hello.g4" en tu carpeta Assets.
 Copia y pega las siguientes reglas de gramática en "Hello.g4":
-antlr
-Copy code
-grammar Hello;
 
-r  : 'hello' ID { UnityEngine.Debug.Log("Antlr dice: ¡Hola, " + $ID.text); } ;  // coincide con la palabra clave hello seguida de un identificador
+
+```grammar Hello; ```
+
+```
+r  : 'hello' ID { UnityEngine.Debug.Log("Antlr dice: ¡Hola, " + $ID.text); } ;  // coincide con la palabra clave hello seguida de un identificador 
 ID : ([A-Z] | [a-z])+ ; // coincide con identificadores en minúsculas
 WS : [ \t\r\n]+ -> skip ; // omite espacios, tabulaciones y saltos de línea
-Genera los archivos fuente en C# ejecutando el siguiente comando en tu terminal:
-bash
-Copy code
-antlr4 -Dlanguage=CSharp Hello.g4
-Script de Unity
+```
+###Genera los archivos fuente en C# ejecutando el siguiente comando en tu terminal:
+
+```antlr4 -Dlanguage=CSharp Hello.g4```
+###Script de Unity
 Crea un nuevo GameObject en tu escena de Unity.
 
 Agrega un nuevo script llamado "HelloAntlr" al GameObject.
 
 Copia y pega el siguiente script en "HelloAntlr":
 
-csharp
-Copy code
+
+```
 using UnityEngine;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
@@ -75,6 +72,9 @@ public class HelloAntlr : MonoBehaviour
         parser.r();
     }
 }
+
+```
+
 Haz clic en el botón de reproducción en Unity para ver la salida en la consola: "Antlr dice: ¡Hola, Mundo!"
 
 Demostración de Tortoise
@@ -82,9 +82,9 @@ El proyecto incluye una escena de demostración, "TortoiseScene," que ilustra c�
 
 Ejemplo de script en el lenguaje Tortoise:
 
-plaintext
-Copy code
+```
+
 mov fwd 3
 rot -20
 mov fwd 2
-¡Disfruta explorando y experimentando con las capacidades de secuenciación basadas en Antlr en Unity!
+```
