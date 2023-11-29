@@ -1,20 +1,23 @@
+# AntlrExampleUnity (Basado en [AntlrExampleUnity de jewagenaar](https://github.com/jewagenaar/AntlrExampleUnity))
 
-AntlrExampleUnity (Basado en AntlrExampleUnity de jewagenaar)
-Descripción
-Este proyecto es una extensión del AntlrExampleUnity original creado por jewagenaar. Demuestra cómo implementar un lenguaje de secuencias creado con Antlr en Unity. El proyecto incluye una escena de demostración (TortoiseScene) que muestra el uso del lenguaje de secuencias basado en Antlr en un entorno de juego de Unity.
+## Descripción
 
-Propósito
+Este proyecto es una extensión del [AntlrExampleUnity](https://github.com/jewagenaar/AntlrExampleUnity) original creado por [jewagenaar](https://github.com/jewagenaar). Demuestra cómo implementar un lenguaje de secuencias creado con Antlr en Unity. El proyecto incluye una escena de demostración (TortoiseScene) que muestra el uso del lenguaje de secuencias basado en Antlr en un entorno de juego de Unity.
+
+## Propósito
+
 La motivación detrás de este proyecto es explorar la integración de Antlr en Unity para crear un lenguaje de secuencias simple. El lenguaje de secuencias está diseñado para manipular GameObjects en tiempo de ejecución, proporcionando una base para incorporar elementos de codificación en la jugabilidad.
 
-Cómo Usar
-Requisitos Previos
+## Cómo Usar
+
+### Requisitos Previos
+
 Antes de usar este proyecto, asegúrate de tener Antlr instalado. Los siguientes pasos te guiarán a través del proceso de instalación:
 
-Navega al directorio /usr/local/lib.
-Descarga el archivo JAR completo de Antlr:
-bash
-Copy code
-$ curl -O http://www.antlr.org/download/antlr-4.5-complete.jar
+1. Navega al directorio `/usr/local/lib`.
+2. Descarga el archivo JAR completo de Antlr:
+   ```bash
+   $ curl -O http://www.antlr.org/download/antlr-4.5-complete.jar
 Establece la variable de entorno CLASSPATH:
 bash
 Copy code
