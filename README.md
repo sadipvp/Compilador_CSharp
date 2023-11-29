@@ -14,15 +14,17 @@ La motivación detrás de este proyecto es explorar la integración de Antlr en 
 
 Antes de usar este proyecto, asegúrate de tener Antlr instalado. Los siguientes pasos te guiarán a través del proceso de instalación:
 
+```bash
 1. Navega al directorio `/usr/local/lib`.
 2. Descarga el archivo JAR completo de Antlr:
-   ```bash
    $ curl -O http://www.antlr.org/download/antlr-4.5-complete.jar
 Establece la variable de entorno CLASSPATH:
+
 bash
 Copy code
 $ export CLASSPATH=".:/usr/local/lib/antlr-4.5-complete.jar:$CLASSPATH"
 Crea un alias para Antlr4:
+
 bash
 Copy code
 $ alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.5-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
