@@ -21,9 +21,11 @@ Antes de usar este proyecto, asegúrate de tener Antlr instalado. Los siguientes
 Establece la variable de entorno CLASSPATH:
 
 bash
-Copy code
+
 $ export CLASSPATH=".:/usr/local/lib/antlr-4.5-complete.jar:$CLASSPATH"
-Crea un alias para Antlr4:
+
+
+## Crea un alias para Antlr4:
 
 bash
 Copy code
